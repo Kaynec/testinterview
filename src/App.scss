@@ -1,0 +1,225 @@
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-size: 14px;
+  font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
+  width: 100vw;
+  height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+#root {
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+// all links should not have default style
+a {
+  text-decoration: none;
+}
+// header with the nav element
+header {
+  background: rgb(2, 2, 31);
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 2rem;
+  position: sticky;
+
+  a {
+    color: white;
+  }
+
+  nav {
+    display: flex;
+    gap: 1rem;
+
+    a {
+      color: rgb(255, 255, 255);
+    }
+  }
+}
+
+// left side menu with inner items inside it
+.menu {
+  position: fixed;
+  background: hsla(197, 71%, 73%, 0.95);
+  padding: 3rem;
+  top: 0%;
+  left: 0;
+  width: 40vw;
+  height: 100vh;
+
+  .inner-menu {
+    display: none;
+  }
+
+  ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    gap: 3rem;
+
+    li {
+      position: relative;
+      ul {
+        position: absolute;
+        right: -75%;
+        top: 200%;
+
+        a {
+          color: rgb(15, 4, 26);
+        }
+      }
+    }
+
+    a {
+      color: white;
+      &:hover + .inner-menu {
+        .inner-menu {
+          display: block;
+        }
+      }
+    }
+  }
+
+  .close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 2rem;
+    transition: 0.5s;
+    cursor: pointer;
+
+    &:hover {
+      transform: scale(1.2);
+    }
+  }
+}
+
+.mobile-trigger {
+  display: none;
+}
+
+.mobile {
+  position: fixed;
+  text-align: center;
+  width: 100%;
+  min-height: 10rem;
+  inset: 0;
+  background: hsla(187, 91%, 53%, 0.95);
+  display: flex;
+  margin: 5rem auto;
+  padding: 2rem;
+  display: none;
+
+  a {
+    color: white;
+    margin: 20%;
+    display: block;
+  }
+}
+
+.mobile.visible {
+  display: block;
+}
+
+.container {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 1rem;
+  margin: 1rem 0;
+
+  .card {
+    width: 32.5%;
+    padding: 2rem;
+    border: 4px solid skyblue;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    h3 {
+      border-bottom: 4px solid rgb(15, 15, 81);
+      text-align: center;
+      padding: 0.5rem;
+    }
+
+    h4 {
+      width: 100%;
+      padding: 1rem;
+
+      span {
+        color: green;
+      }
+    }
+
+    img {
+      width: clamp(100px, 150px, 200px);
+      height: clamp(100px, 150px, 200px);
+      margin: 1rem;
+      border: 3px solid pink;
+      border-radius: 50%;
+    }
+  }
+}
+// styles for a user page
+.user {
+  max-width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  gap: 2rem;
+
+  img {
+    max-width: 300px;
+  }
+
+  span {
+    color: red;
+  }
+}
+// media query for mobile and removing the mobile menu on bigger screens
+@media screen and (max-width: 600px) {
+  .mobile-trigger {
+    display: block;
+  }
+
+  header {
+    nav {
+      display: none;
+    }
+  }
+
+  .container {
+    flex-direction: column;
+
+    .card {
+      width: 100%;
+    }
+  }
+
+  .menu {
+    width: 100vw;
+  }
+}
+
+@media screen and (min-width: 601px) {
+  .mobile {
+    display: none;
+  }
+  .mobile.visible {
+    display: none;
+  }
+}
