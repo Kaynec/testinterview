@@ -1,7 +1,7 @@
 import React from "react";
 import { VictoryBar, VictoryChart } from "victory";
 import { useLocation } from "react-router-dom";
-
+import { Link } from "react-router-dom";
 export default function UserDetail(props) {
   // using the passed in user via location hook
   const location = useLocation();
@@ -38,6 +38,7 @@ export default function UserDetail(props) {
             <VictoryBar data={user.profit} x="time" y="value" />
           </VictoryChart>
         </div>
+        <Link to="/"> GO BACK</Link>
       </div>
       ;
     </>

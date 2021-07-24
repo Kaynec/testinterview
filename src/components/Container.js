@@ -6,7 +6,7 @@ export default function Container({ users }) {
     <div className="container">
       {users.map((user) => {
         return (
-          <div className="card">
+          <div className="card" key={user.id}>
             <h3>
               {" "}
               <Link

@@ -1,5 +1,4 @@
 {
-  "homepage": "Kaynec.github.io/testinterview",
   "name": "testinterview",
   "version": "0.1.0",
   "private": true,
@@ -39,5 +38,9 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
+  },
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "sass": "^1.36.0"
   }
 }
