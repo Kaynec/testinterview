@@ -190,6 +190,10 @@ header {
     color: red;
   }
 }
+
+.chart-div {
+  width: 50%;
+}
 // media query for mobile and removing the mobile menu on bigger screens
 @media screen and (max-width: 600px) {
   .mobile-trigger {

@@ -10,24 +10,23 @@ function App() {
     {
       name: "Ali Yazdani",
       image:
-        "https://images.freeimages.com/images/large-previews/bd7/falloxbow-1058032.jpg",
+        "https://cdn.pixabay.com/photo/2017/06/05/07/59/octopus-2373177_960_720.png",
       return: "17%",
       risk: "7%",
       id: uuid(),
       profit: [
         {
-          time: "2012",
-          value: "12%",
-        },
-
-        {
-          time: "2013",
-          value: "19%",
-        },
-
-        {
-          time: "2015",
+          time: "2019",
           value: "10%",
+        },
+        {
+          time: "2020",
+          value: "23%",
+        },
+
+        {
+          time: "2021",
+          value: "36%",
         },
       ],
     },
@@ -35,24 +34,23 @@ function App() {
     {
       name: "Ali Yazdani",
       image:
-        "https://images.freeimages.com/images/large-previews/bd7/falloxbow-1058032.jpg",
+        "https://cdn.pixabay.com/photo/2021/06/29/07/35/woman-6373424_960_720.jpg",
       return: "17%",
       risk: "7%",
       id: uuid(),
       profit: [
         {
-          time: "2012",
-          value: "12%",
-        },
-
-        {
-          time: "2013",
-          value: "19%",
-        },
-
-        {
-          time: "2015",
+          time: "2019",
           value: "10%",
+        },
+        {
+          time: "2020",
+          value: "23%",
+        },
+
+        {
+          time: "2021",
+          value: "36%",
         },
       ],
     },
@@ -60,24 +58,23 @@ function App() {
     {
       name: "Ali Yazdani",
       image:
-        "https://images.freeimages.com/images/large-previews/bd7/falloxbow-1058032.jpg",
+        "https://cdn.pixabay.com/photo/2021/07/05/11/23/palmtrees-6388901_960_720.jpg",
       return: "17%",
       risk: "7%",
       id: uuid(),
       profit: [
         {
-          time: "2012",
-          value: "12%",
-        },
-
-        {
-          time: "2013",
-          value: "19%",
-        },
-
-        {
-          time: "2015",
+          time: "2019",
           value: "10%",
+        },
+        {
+          time: "2020",
+          value: "23%",
+        },
+
+        {
+          time: "2021",
+          value: "36%",
         },
       ],
     },

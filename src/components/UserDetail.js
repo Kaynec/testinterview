@@ -1,5 +1,5 @@
 import React from "react";
-import { VictoryBar, VictoryChart } from "victory";
+import { VictoryBar, VictoryChart, VictoryLine } from "victory";
 import { useLocation } from "react-router-dom";
 import { Link } from "react-router-dom";
 export default function UserDetail(props) {
@@ -33,9 +33,9 @@ export default function UserDetail(props) {
           })}
         </div>
 
-        <div style={{ width: "50%" }}>
+        <div className="chart-div">
           <VictoryChart>
-            <VictoryBar data={user.profit} x="time" y="value" />
+            <VictoryLine data={user.profit} x="time" y="value" />
           </VictoryChart>
         </div>
         <Link to="/"> GO BACK</Link>

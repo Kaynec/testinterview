@@ -1,23 +1,15 @@
 import React from "react";
-import { useMediaQuery } from "react-responsive";
 
 export default function Header() {
   const [mobileNav, setMobileNav] = React.useState(false);
 
   const [menu, setMenu] = React.useState(false);
 
-  // completely disable mobile menu on bigger screens
-  const isDesktopOrLaptop = useMediaQuery({
-    query: "(min-device-width: 605px)",
-  });
-
   return (
     <>
       {/* header and left side menu trigger trigger */}
       <header>
-        <a href="#" onClick={() => setMenu((p) => !p)}>
-          MENU
-        </a>
+        <a onClick={() => setMenu((p) => !p)}>MENU</a>
         {/* mobile trigger */}
         <a
           href="#"
@@ -56,20 +48,16 @@ export default function Header() {
           <li>
             <details>
               <summary>
-                {" "}
                 <a>SETTINGS1</a>{" "}
               </summary>
               <ul>
                 <li>
-                  {" "}
                   <a href=""> item1</a>
                 </li>
                 <li>
-                  {" "}
                   <a href=""> item2</a>
                 </li>
                 <li>
-                  {" "}
                   <a href=""> item3 </a>{" "}
                 </li>
               </ul>
@@ -83,16 +71,13 @@ export default function Header() {
               </summary>
               <ul>
                 <li>
-                  {" "}
                   <a href=""> item1</a>
                 </li>
                 <li>
-                  {" "}
                   <a href=""> item2</a>
                 </li>
                 <li>
-                  {" "}
-                  <a href=""> item3 </a>{" "}
+                  <a href=""> item3 </a>
                 </li>
               </ul>
             </details>
